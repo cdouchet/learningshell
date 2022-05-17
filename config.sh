@@ -1,4 +1,4 @@
-user=$(logname)
+user=$(ps -o user= -p $$ | awk '{print $1}')
 zshpath=/home/$user/.zshrc
 hostsPath=/etc/hosts
 
