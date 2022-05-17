@@ -107,9 +107,3 @@ sed -i '11d' $zshpath
 sed -i '11iZSH_THEME=\"fino\"' $zshpath
 
 echo "ZSH_THEME=\"fino\"" >> $zshpath
-
-su $user
-
-clear
-
-exec zsh
