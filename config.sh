@@ -1,9 +1,3 @@
-# declare -a packageArray
-# packageArray=("wget" "git" "zsh" "curl")
-
-# First argument is the element to print.
-# # Second argument is the color in CAPITAL LETTERS.
-
 user=$(logname)
 zshpath=/home/$user/.zshrc
 hostsPath=/etc/hosts
@@ -107,3 +101,15 @@ printer "Starting configuration of .zshrc file in $zshpath"
 zshConfig
 
 printer "Configuration complete."
+
+sed -i '11d' $zshpath
+
+sed -i '11iZSH_THEME=\"fino\"' $zshpath
+
+echo "ZSH_THEME=\"fino\"" >> $zshpath
+
+su $user
+
+clear
+
+exec zsh
