@@ -79,6 +79,10 @@ fi
 
 printer "Welcome $user !"
 
+printer "Copying template into $zshpath"
+
+cp $(dirname 'realpath $0') $zshpath
+
 printer "Starting installation of necessary packages.."
 
 installAll
