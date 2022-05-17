@@ -81,7 +81,9 @@ printer "Welcome $user !"
 
 printer "Copying template into $zshpath"
 
-cp $(dirname 'realpath $0') $zshpath
+printer /home/$user
+
+cp $(dirname 'realpath $0')/.zshrc /home/$user
 
 printer "Starting installation of necessary packages.."
 
