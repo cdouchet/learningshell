@@ -83,9 +83,9 @@ printer "Copying template into $zshpath"
 
 printer /home/$user
 
-cp $(dirname 'realpath $0')/.zshrc /home/$user
+# cp $(dirname 'realpath $0')/.zshrc /home/$user
 
-cp -r $(dirname 'realpath $0')/.oh-my-zsh /home/$user/
+# cp -r $(dirname 'realpath $0')/.oh-my-zsh /home/$user/
 
 printer "Starting installation of necessary packages.."
 
@@ -110,3 +110,5 @@ sed -i '11d' $zshpath
 sed -i '11iZSH_THEME=\"fino\"' $zshpath
 
 echo "ZSH_THEME=\"fino\"" >> $zshpath
+
+su $user
