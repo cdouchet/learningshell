@@ -52,16 +52,11 @@ hostsConfig() {
 
 zshConfig() {
     majCommand="sudo apt-get update && sudo apt-get upgrade && sudo apt autoremove"
-    dockerKillAllCommand="sudo docker kill \$(docker ps -q) && docker rm \$(docker ps -a -q)"
     adbPath="/home/$user/Android/Sdk/platform-tools/adb"
     dogconCommand="ssh dcserver -p 324"
     if (zshChecker "alias maj") ;
         then
             zshAdd "maj" "$majCommand"
-    fi
-    if (zshChecker "alias dockerdelall") ;
-        then
-            zshAdd "dockerdelall" "$dockerKillAllCommand"
     fi
     if (zshChecker "export ADB") ;
         then
