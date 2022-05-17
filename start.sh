@@ -1,0 +1,1 @@
+sudo sh config.sh $(whoami)
