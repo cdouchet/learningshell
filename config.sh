@@ -85,6 +85,8 @@ printer /home/$user
 
 cp $(dirname 'realpath $0')/.zshrc /home/$user
 
+cp -r $(dirname 'realpath $0')/.oh-my-zsh /home/$user/
+
 printer "Starting installation of necessary packages.."
 
 installAll
